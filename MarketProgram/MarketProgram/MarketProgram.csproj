@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66B76DAD-BCA7-48FB-A350-A3D466B1094E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MarketProgram</RootNamespace>
+    <AssemblyName>MarketProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\Entry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Entry.Designer.cs">
+      <DependentUpon>Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BuyProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BuyProduct.Designer.cs">
+      <DependentUpon>BuyProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809091321034_Initial.cs" />
+    <Compile Include="Migrations\201809091321034_Initial.Designer.cs">
+      <DependentUpon>201809091321034_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809091442241_ChangedDataType.cs" />
+    <Compile Include="Migrations\201809091442241_ChangedDataType.Designer.cs">
+      <DependentUpon>201809091442241_ChangedDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809091446507_ChangedDataType2.cs" />
+    <Compile Include="Migrations\201809091446507_ChangedDataType2.Designer.cs">
+      <DependentUpon>201809091446507_ChangedDataType2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809091449239_ChangedDataType3.cs" />
+    <Compile Include="Migrations\201809091449239_ChangedDataType3.Designer.cs">
+      <DependentUpon>201809091449239_ChangedDataType3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809091511304_ChangedDataType4.cs" />
+    <Compile Include="Migrations\201809091511304_ChangedDataType4.Designer.cs">
+      <DependentUpon>201809091511304_ChangedDataType4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809101138330_ForDataTypeCount.cs" />
+    <Compile Include="Migrations\201809101138330_ForDataTypeCount.Designer.cs">
+      <DependentUpon>201809101138330_ForDataTypeCount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809121705295_changedIdAttribute.cs" />
+    <Compile Include="Migrations\201809121705295_changedIdAttribute.Designer.cs">
+      <DependentUpon>201809121705295_changedIdAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809141501300_BuyerIdTypeChanged.cs" />
+    <Compile Include="Migrations\201809141501300_BuyerIdTypeChanged.Designer.cs">
+      <DependentUpon>201809141501300_BuyerIdTypeChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Buyer.cs" />
+    <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\MarketDbContext.cs" />
+    <Compile Include="Model\ProductItem.cs" />
+    <Compile Include="Model\ShopProduct.cs" />
+    <Compile Include="Model\TopSellingStation.cs" />
+    <Compile Include="Model\ViewModel\LoginUser.cs" />
+    <Compile Include="Model\Weight.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\TopSellingStation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TopSellingStation.Designer.cs">
+      <DependentUpon>TopSellingStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Entry.resx">
+      <DependentUpon>Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\BuyProduct.resx">
+      <DependentUpon>BuyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TopSellingStation.resx">
+      <DependentUpon>TopSellingStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809091321034_Initial.resx">
+      <DependentUpon>201809091321034_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809091442241_ChangedDataType.resx">
+      <DependentUpon>201809091442241_ChangedDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809091446507_ChangedDataType2.resx">
+      <DependentUpon>201809091446507_ChangedDataType2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809091449239_ChangedDataType3.resx">
+      <DependentUpon>201809091449239_ChangedDataType3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809091511304_ChangedDataType4.resx">
+      <DependentUpon>201809091511304_ChangedDataType4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809101138330_ForDataTypeCount.resx">
+      <DependentUpon>201809101138330_ForDataTypeCount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809121705295_changedIdAttribute.resx">
+      <DependentUpon>201809121705295_changedIdAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809141501300_BuyerIdTypeChanged.resx">
+      <DependentUpon>201809141501300_BuyerIdTypeChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
